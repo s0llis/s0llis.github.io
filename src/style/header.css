@@ -99,6 +99,12 @@ header {
     opacity: 1;
 }
 
+@media (max-width: 768px) {
+    .navigation {
+        display: none;
+    }
+}
+
 .hire-button {
     display: inline-block;
     text-decoration: none;
@@ -113,6 +119,7 @@ header {
     margin-left: 150px;
     transition: background-color 500ms, transform 500ms, box-shadow 500ms;
     cursor: pointer;
+    white-space: nowrap;
 }
 
 .hire-button:hover {
