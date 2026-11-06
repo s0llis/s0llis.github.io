@@ -2,7 +2,7 @@ header {
     position: fixed;
     width: fit-content;
     max-width: calc(100% - 32px);
-    top: 15px;
+    top: 10px;
     left: 0;
     right: 0;
     z-index: 1000;
@@ -19,8 +19,9 @@ header {
     -webkit-backdrop-filter: blur(14px) saturate(120%);
     backdrop-filter: blur(14px) saturate(120%);
     
-    border: 1px solid rgb(255 255 255 / 0.24);
+    border: 1px solid rgb(255 255 255 / 0.04);
     border-radius: 999px;
+    box-shadow: 0 0 10px rgb(0 0 0 / 0.4);
 }
 
 .hero-logo {
@@ -99,13 +100,24 @@ header {
 }
 
 .hire-button {
+    display: inline-block;
+    text-decoration: none;
     color: white;
     background-color: black;
     border-radius: 20px;
-    padding: 7px 22px 7px 22px;
+    padding: 7px 20px 7px 20px;
     font-size: 15px;
     font-weight: bold;
     border: none;
     box-shadow: 0 4px 12px rgb(0 0 0 / 0.2);
     margin-left: 150px;
+    transition: background-color 500ms, transform 500ms, box-shadow 500ms;
+    cursor: pointer;
+}
+
+.hire-button:hover {
+    background-color: #2f6bff;
+    transform: scaleX(1.03);
+    box-shadow: 0 0 15px #2f6bff;
+    font-size: 15px;
 }
