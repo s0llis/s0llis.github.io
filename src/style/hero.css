@@ -1,0 +1,119 @@
+.hero {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 100svh;
+    min-height: 600px;
+}
+
+.hero h1, h2 {
+    user-select: none;
+    -webkit-user-select: none;
+    white-space: nowrap;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 17%;
+    background: linear-gradient(to bottom, transparent, #000);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.main-background {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    filter: blur(3px);
+}
+
+.hero-avatar {
+    position: absolute;
+    z-index: 1;
+    bottom: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: min(750px, 100%);
+    pointer-events: none;
+    transition: bottom, left, transform, 1s;
+}
+
+.hero:has(.hero-role-second:hover) .hero-avatar {
+    transform: translate(-130px, 50px) rotate(-10deg);
+}
+
+.hero-role-first {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 0;
+    bottom: 590px;
+    left: 0;
+    right: 0;
+    margin: 0;
+    text-align: center;
+    color: black;
+    font-size: 160px;
+    font-weight: 800;
+}
+
+.hero-role-second {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 0;
+    bottom: 440px;
+    left: 50%;
+    transform: translateX(-50%);
+    right: 0;
+    
+    color: transparent;
+    -webkit-text-stroke: 3px black;
+    font-size: 160px;
+    font-weight: 800;
+    margin: 0;
+    transition: color 2s ease, -webkit-text-stroke-color 2s ease;
+}
+
+.hero-role-second-front {
+    pointer-events: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 2;
+    bottom: 440px;
+    left: 50%;
+    transform: translateX(-50%);
+    right: 0;
+
+    color: transparent;
+    -webkit-text-stroke: 3px black;
+    font-size: 160px;
+    font-weight: 800;
+    margin: 0;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+
+.hero-role-second:hover ~ .hero-role-second-front {
+    opacity: 1;
+}
+
+
