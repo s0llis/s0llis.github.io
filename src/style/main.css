@@ -1,4 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Golos+Text:wght@400..900&display=swap');
+:root {
+    color-scheme: only light;
+}
 
 body {
     color: white;
@@ -10,5 +12,3 @@ body {
 p {
     margin: 0;
 }
-
-

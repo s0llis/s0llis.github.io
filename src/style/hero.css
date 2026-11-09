@@ -21,13 +21,26 @@
     left: 0;
     right: 0;
     bottom: 0;
-    height: 17%;
-    background: linear-gradient(to bottom, transparent, #000);
+    height: 30%;
+    background: linear-gradient(
+            to bottom,
+            rgb(0 0 0 / 0) 0%,
+            rgb(0 0 0 / 0.02) 10%,
+            rgb(0 0 0 / 0.08) 25%,
+            rgb(0 0 0 / 0.2) 42%,
+            rgb(0 0 0 / 0.4) 60%,
+            rgb(0 0 0 / 0.65) 78%,
+            rgb(0 0 0 / 0.88) 92%,
+            rgb(0 0 0 / 1) 100%
+    );
     pointer-events: none;
     z-index: 1;
 }
-
 .main-background {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     position: absolute;
     z-index: -1;
     width: 100%;
@@ -37,83 +50,114 @@
     filter: blur(3px);
 }
 
+.hero-role {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 50%;
+    text-align: center;
+    pointer-events: none;
+}
+
 .hero-avatar {
     position: absolute;
-    z-index: 1;
-    bottom: 130px;
-    display: flex;
     justify-content: center;
-    align-items: center;
-    width: min(750px, 100%);
+    bottom: 0;
+    width: clamp(500px, 50vw, 1250px);
+    margin: 0;
+    z-index: 1;
     pointer-events: none;
-    transition: bottom, left, transform, 1s;
+    transition: transform, 1s;
+    filter: drop-shadow(0 10px 20px rgb(0 0 0 / 0.36))
+            drop-shadow(0 0 2px rgb(0 0 0));
 }
 
 .hero:has(.hero-role-second:hover) .hero-avatar {
     transform: translate(-130px, 50px) rotate(-10deg);
 }
 
+.hero-role-first,
+.hero-role-second,
+.hero-role-second-front {
+    font-size: clamp(40px, 11vw, 176px);
+    font-weight: 900;
+    line-height: 1;
+    margin: 0;
+}
+
 .hero-role-first {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    z-index: 0;
-    bottom: 590px;
-    left: 0;
-    right: 0;
+    position: relative;
     margin: 0;
     text-align: center;
     color: black;
-    font-size: 160px;
-    font-weight: 800;
+    text-shadow: 0 0 10px rgb(0 0 0 / 0.42);
+}
+
+.hero-role-wrap {
+    position: relative;
+    width: fit-content;
+    margin: 0 auto;
+    text-align: left;
 }
 
 .hero-role-second {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    z-index: 0;
-    bottom: 440px;
-    left: 50%;
-    transform: translateX(-50%);
+    display: inline-block;
+    position: relative;
     right: 0;
+    pointer-events: auto;
     
     color: transparent;
-    -webkit-text-stroke: 3px black;
-    font-size: 160px;
-    font-weight: 800;
-    margin: 0;
+    -webkit-text-stroke: 4px black;
+    filter: drop-shadow(0 0px 10px rgb(0 0 0 / 0.42));
+    margin: 0 auto 0 auto;
     transition: color 2s ease, -webkit-text-stroke-color 2s ease;
 }
 
 .hero-role-second-front {
-    pointer-events: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     position: absolute;
+    inset: 0;
     z-index: 2;
-    bottom: 440px;
-    left: 50%;
-    transform: translateX(-50%);
-    right: 0;
-
     color: transparent;
     -webkit-text-stroke: 3px black;
-    font-size: 160px;
-    font-weight: 800;
-    margin: 0;
+    margin: 0 auto 0 auto;
     white-space: nowrap;
     opacity: 0;
     transition: opacity 0.5s ease;
 }
 
+.hero-level {
+    position: absolute;
+    color: black;
+    font-size: clamp(30px, 5vw, 80px);
+    font-weight: 700;
+    filter: drop-shadow(0 0px 10px rgb(0 0 0 / 0.42));
+}
+
 
 .hero-role-second:hover ~ .hero-role-second-front {
     opacity: 1;
+}
+
+@media (max-width: 768px) {
+    .hero-role-first,
+    .hero-role-second,
+    .hero-role-second-front {
+        font-size: clamp(30px, 12vw, 80px);
+    }
+    
+    .hero-role-first {
+        color: black;
+    }
+    
+    .hero-role-second, .hero-role-second-front {
+        font-weight: 900;
+        -webkit-text-stroke: 3px black;
+    }
+
+    .hero:has(.hero-role-second:hover) .hero-avatar {
+        transform: none;
+    }
+    
 }
 
 

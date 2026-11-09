@@ -3,6 +3,7 @@
     <head>
         <title>S0llis's Portfolio</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="color-scheme" content="only light">
         <link rel="stylesheet" href="./src/style/main.css">
         <link rel="stylesheet" href="./src/style/header.css">
         <link rel="stylesheet" href="./src/style/hero.css">
@@ -31,12 +32,15 @@
         
         <main>
             <section class="hero">
-                <img class="main-background" src="/images/main-background.png" alt="background">
+                <img class="main-background" src="/images/main-background.jpg" alt="background">
                 <img class="hero-avatar" src="/images/avatar.png" alt="me">
-                <div>
+                <div class="hero-role">
                     <h1 class="hero-role-first">Full-Stack</h1>
-                    <h2 class="hero-role-second">Web Developer</h2>
-                    <h2 class="hero-role-second-front">Web Developer</h2>
+                    <div class="hero-role-wrap">
+                        <h2 class="hero-role-second">Web Developer</h2>
+                        <div class="hero-role-second-front" aria-hidden="true">Web Developer</div>
+                        <p class="hero-level">Junior</p>
+                    </div>
                 </div>
             </section>
         </main>

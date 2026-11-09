@@ -15,7 +15,7 @@ header {
     justify-content: center;
     align-items: center;
     
-    background: rgb(0 0 0 / 0.4);
+    background: rgb(0 0 0 / 0.47);
     -webkit-backdrop-filter: blur(14px) saturate(120%);
     backdrop-filter: blur(14px) saturate(120%);
     
@@ -99,12 +99,6 @@ header {
     opacity: 1;
 }
 
-@media (max-width: 768px) {
-    .navigation {
-        display: none;
-    }
-}
-
 .hire-button {
     display: inline-block;
     text-decoration: none;
@@ -127,4 +121,10 @@ header {
     transform: scaleX(1.03);
     box-shadow: 0 0 15px #2f6bff;
     font-size: 15px;
+}
+
+@media (max-width: 768px) {
+    .navigation {
+        display: none;
+    }
 }
