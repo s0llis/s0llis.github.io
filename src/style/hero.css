@@ -125,18 +125,34 @@
     transition: opacity 0.5s ease;
 }
 
-.hero-level {
+.stack-marquee {
     position: absolute;
+    overflow: hidden;
     color: black;
-    font-size: clamp(30px, 5vw, 80px);
-    font-weight: 700;
-    filter: drop-shadow(0 0px 10px rgb(0 0 0 / 0.42));
+    width: 45%;
+    font-size: clamp(10px, 3vw, 25px);
+    font-weight: 650;
+    -webkit-mask-image: linear-gradient(to right, transparent, #000 15%, #000 90%, transparent);
+    mask-image: linear-gradient(to right, transparent, #000 10%, #000 90%, transparent);
+}
+
+.stack-track {
+    width: max-content;
+    white-space: nowrap;
+    animation: marquee 20s linear infinite;
+    text-shadow: 0 0 4px rgb(0 0 0 / 0.34);
+}
+
+@keyframes marquee {
+    to {transform: translateX(-50%)}
 }
 
 
 .hero-role-second:hover ~ .hero-role-second-front {
     opacity: 1;
 }
+
+.
 
 @media (max-width: 768px) {
     .hero-role-first,
