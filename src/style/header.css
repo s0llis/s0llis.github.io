@@ -99,8 +99,9 @@ header {
     opacity: 1;
 }
 
-.hire-button {
+.get-in-touch-button {
     display: inline-block;
+    justify-content: center;
     text-decoration: none;
     color: white;
     background-color: black;
@@ -116,11 +117,17 @@ header {
     white-space: nowrap;
 }
 
-.hire-button:hover {
+.get-in-touch-button:hover {
     background-color: #2f6bff;
     transform: scaleX(1.03);
     box-shadow: 0 0 15px #2f6bff;
     font-size: 15px;
+}
+
+.get-in-touch-button:active {
+    background: #0d1f4a;
+    box-shadow: 0 0 6px #2f6bff;
+    transition: all 80ms;
 }
 
 @media (max-width: 768px) {
