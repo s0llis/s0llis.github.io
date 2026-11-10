@@ -63,7 +63,7 @@
     position: absolute;
     justify-content: center;
     bottom: 0;
-    width: clamp(500px, 50vw, 1250px);
+    width: clamp(570px, 50vw, 1250px);
     margin: 0;
     z-index: 1;
     pointer-events: none;
@@ -152,7 +152,71 @@
     opacity: 1;
 }
 
-.
+.action-buttons {
+    position: absolute;
+    z-index: 2;
+    margin: 0 auto 0 auto;
+    bottom: 5%;
+    display: flex;
+    gap: 25px;
+}
+
+.hero-contact-me-button, 
+.hero-view-projects-button {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+    white-space: nowrap;
+    border-radius: 999px;
+    font-size: clamp(15px, 1vw, 16px);
+    padding: 7px 20px 7px 20px;
+    font-weight: bold;
+    transition: all 500ms;
+}
+
+.hero-contact-me-button {
+    background-color: black;
+    border: 2px solid rgb(255 255 255 / 0.24);
+    box-shadow: 0 0 15px rgb(255 255 255 / 0.3);
+}
+
+.hero-view-projects-button {
+    background-color: #2f6bff;
+    box-shadow: 0 0 15px #2f6bff;
+    border: 2px solid rgb(113 154 255 / 0.02);
+    animation: shadow-flickering ease-in-out 2s infinite alternate;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .hero-contact-me-button:hover {
+        background-color: #2f6bff;
+        transform: scale(1.03);
+        box-shadow: 0 0 10px #2f6bff;
+        border: 2px solid #2f6bff;
+    }
+
+    .hero-view-projects-button:hover {
+        transform: scale(1.03);
+    }
+}
+
+.hero-contact-me-button:active,
+.hero-view-projects-button:active {
+    background: #0d1f4a;
+    box-shadow: none;
+    transform: scale(0.98);
+    transition: all 50ms;
+}
+
+.hero-contact-me-button:active {
+    border: 2px solid rgb(0 0 0 / 0);
+}
+
+@keyframes  shadow-flickering{
+    to {box-shadow: 0 0 35px rgb(47 107 255 / 0.77)
+    }
+}
 
 @media (max-width: 768px) {
     .hero-role-first,
@@ -174,6 +238,10 @@
         transform: none;
     }
     
+    .hero-role {
+        transform: translateY(-35px);
+    }
 }
+
 
 
