@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="800" height="800" viewBox="0 0 64 64"
+     role="img" aria-label="Entity Framework icon">
+  <circle cx="32" cy="32" r="32" fill="#E96B2C"/>
+  <text x="32" y="33"
+        fill="#FFFFFF"
+        font-family="Arial, Helvetica, sans-serif"
+        font-size="22"
+        font-weight="700"
+        letter-spacing="-0.7"
+        text-anchor="middle"
+        dominant-baseline="middle">EF</text>
+</svg>

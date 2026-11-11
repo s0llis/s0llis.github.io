@@ -1,0 +1,125 @@
+.about {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 40px;
+    max-width: 1700px;
+    margin: 100px auto 0;
+    padding: 0 25px;
+    box-sizing: border-box;
+}
+
+.about h2 {
+    font-size: 30px;
+    margin: 0 0 8px;
+}
+
+.about-card,
+.about-status-card,
+.about-stack-card {
+    margin: 0;
+    padding: 20px 20px 15px 20px;
+    border-radius: 35px;
+    border: 1px solid rgb(255 255 255 / 0.15);
+    box-shadow: 0 0 28px rgb(255 255 255 / 0.3);
+    box-sizing: border-box;
+}
+
+.about-card {
+    flex: 1;
+    min-width: 0;
+}
+
+.about-status-card {
+    flex: 0 0 240px;
+}
+
+.about-card p {
+    margin: 0 0 20px;
+    line-height: 1.25;
+}
+
+.about-card p:last-child,
+.about-status-card dd:last-child {
+    margin-bottom: 0;
+}
+
+.stack-column {
+    margin-right: 20px;
+}
+
+.about-stack-card {
+    display: flex;
+    flex-direction: column;
+    background-color: #001537;
+    border: 1px solid rgb(47 107 255 / 0.2);
+    box-shadow: 0 0 28px rgb(47 107 255 / 0.52)
+}
+
+.stack-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+}
+
+.about-stack-card dl {
+    margin: 0;
+}
+
+.about-stack-card dt,
+.about-status-card dt {
+    font-weight: 700;
+}
+
+.about-stack-card dd,
+.about-status-card dd {
+    margin: 4px 0 13px;
+}
+
+
+.about-stack-card ul,
+.about-status-card ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.about-stack-card li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    filter: drop-shadow(0 0 10px rgb(255 255 255 / 0.25));
+}
+
+.about-stack-card img {
+    width: 22px;
+    height: 22px;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+.stack-learning-label {
+    font-weight: 700;
+}
+
+.stack-pill {
+    margin-left: 5px;
+}
+
+.open-to-work {
+    color: #29ff29;
+    text-shadow: 0 0 15px rgb(41 255 41 / 0.51);
+    font-weight: 700;
+    margin-bottom: 0;
+}
+
+@media (max-width: 1400px) {
+    .about {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .about-status-card {
+        flex: none;
+    }
+}

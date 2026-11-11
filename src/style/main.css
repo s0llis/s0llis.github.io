@@ -8,6 +8,8 @@ body {
     font-family: 'Golos Text', sans-serif;
     margin: 0;
     -webkit-tap-highlight-color: transparent;
+    -webkit-user-select: none;
+    user-select: none;
 }
 
 p {
