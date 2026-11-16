@@ -1,3 +1,14 @@
+.about {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+    max-width: 1675px;
+    padding: 0 25px;
+    margin: 100px auto 0;
+    box-sizing: border-box;
+}
+
 .about-header {
     display: flex;
     align-items: center;
@@ -16,17 +27,6 @@
     transform: scaleX(0);
     transform-origin: left;   
     transition: transform 0.6s ease;
-}
-
-.about {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: stretch;
-    max-width: 1700px;
-    margin: 100px auto 0;
-    padding: 0 25px;
-    box-sizing: border-box;
 }
 
 .about-cards h2 {
