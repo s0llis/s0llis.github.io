@@ -9,7 +9,7 @@ export default defineConfig({
         rollupOptions: {
             input: {
                 main: resolve(__dirname, 'index.html'),
-                todo: resolve(__dirname, 'projects/todo.app.html')
+                todo: resolve(__dirname, 'projects/todo-app.html')
             }
         }
     }
