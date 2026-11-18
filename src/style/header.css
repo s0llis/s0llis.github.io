@@ -19,7 +19,7 @@ header {
     -webkit-backdrop-filter: blur(14px) saturate(120%);
     backdrop-filter: blur(14px) saturate(120%);
     
-    border: 1px solid rgb(255 255 255 / 0.04);
+    border: 1px solid rgb(255 255 255 / 0.23);
     border-radius: 999px;
     box-shadow: 0 0 10px rgb(0 0 0 / 0.4);
 }
@@ -109,7 +109,7 @@ header {
     padding: 7px 20px 7px 20px;
     font-size: 15px;
     font-weight: bold;
-    border: none;
+    border: 1px solid rgb(255 255 255 / 0.2);
     box-shadow: 0 4px 12px rgb(0 0 0 / 0.2);
     margin-left: 150px;
     transition: background-color 500ms, transform 500ms, box-shadow 500ms;
