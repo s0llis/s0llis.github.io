@@ -2,40 +2,137 @@
 <html lang="en">
     <head>
         <title>Todo-app project</title>
+        <link rel="stylesheet" href="/src/style/main.css">
+        <link rel="stylesheet" href="/src/style/project-page.css">
     </head>
     <body>
         <main>
+            <img class="app-background" src="/images/app-background.jpg" alt="app-background">
             <section class="app-card">
                 <div class="app-header">
                     <div class="app-hero-logo">
                         <img class="logo" src="/icons/hero-icon.svg" alt="logo">
                         <p class="nickname">S0llis</p>
                     </div>
-                    <div class="button">
-                        <a class="return-button" href="/index.html">&#129152; Return</a>
+                    <div class="app-header-buttons">
+                        <a class="action-button" href="/index.html">
+                            <img src="/icons/home.svg" alt="home-icon" width="18" height="18">
+                            Home
+                        </a>
+                        <a class="action-button" href="https://github.com/s0llis/Todo-app" target="_blank">
+                            <img src="/icons/github.svg" alt="home-icon" width="18" height="18">
+                            View on GitHub
+                        </a>
                     </div>
                 </div>
                 
-<!--                <div>-->
-<!--                    <ul>-->
-<!--                        <li class="slide" data-active>-->
-<!--                            <img src="/images/Todo-app/mainmenu.webp" alt="todo-app-image-1">-->
-<!--                        </li>-->
-<!--                        <li class="slide">-->
-<!--                            <img src="/images/Todo-app/login.webp" alt="todo-app-image-2">-->
-<!--                        </li>-->
-<!--                        <li class="slide">-->
-<!--                            <img src="/images/Todo-app/tasks.webp" alt="todo-app-image-3">-->
-<!--                        </li>-->
-<!--                        <li class="slide">-->
-<!--                            <img src="/images/Todo-app/create-task.webp" alt="todo-app-image-4">-->
-<!--                        </li>-->
-<!--                        <li class="slide">-->
-<!--                            <img src="/images/Todo-app/search.webp" alt="todo-app-image-5">-->
-<!--                        </li>-->
-<!--                    </ul>-->
-<!--                </div>-->
+                <div class="app-screenshots">
+                    <div class="slider-buttons">
+                        <button type="button" class="slide-button slider-prev" aria-label="Previous">&#10094;</button>
+                        <button type="button" class="slide-button slider-next" aria-label="Next">&#10095;</button>
+                    </div>
+                    <div class="slider-wrapper">
+
+                        <div class="slider">
+                            <img src="/images/Todo-app/mainmenu.webp" alt="Todo-app main menu">
+                            <img src="/images/Todo-app/login.webp" alt="Todo-app login page">
+                            <img src="/images/Todo-app/tasks.webp" alt="Todo-app tasks">
+                            <img src="/images/Todo-app/create-task.webp" alt="Todo-app create task">
+                            <img src="/images/Todo-app/search.webp" alt="Todo-app search">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="app-content">
+                    <div class="content-row content-row--stats">
+                        <div class="content-block">
+                            <h4>
+                                <img src="/icons/question.svg" alt="question-icon">
+                                Project type
+                            </h4>
+                            <p>Test assignment</p>
+                        </div>
+                        <div class="content-block">
+                            <h4>
+                                <img src="/icons/clock.svg" alt="clock-icon">
+                                Timeline
+                            </h4>
+                            <p>Jan 2026 - Jul 2026</p>
+                        </div>
+                        <div class="content-block">
+                            <h4>
+                                <img src="/icons/chart-pie.svg" alt="chart-pie-icon">
+                                Tech Stack
+                            </h4>
+                            <span>.NET 10</span>
+                            <span>ASP.NET Core</span>
+                            <span>Angular</span>
+                            <span>EF Core</span>
+                            <span>SQL Server</span>
+                            <span>Docker</span>
+                            <span>JWT</span>
+                        </div>
+                    </div>
+
+                    <div class="content-row">
+                        <div class="content-block">
+                            <h4>
+                                <img src="/icons/down-circle.svg" alt="down-circle-icon">
+                                The Task
+                            </h4>
+                            <p>Build a to-do app in the spirit of Microsoft To-Do: users log in, create, edit and delete
+                                tasks, group them into categories, and find them with pagination, search and category 
+                                filtering. The backend had to be a REST API on .NET with a relational database and a 
+                                4-layer architecture, and the frontend an Angular app styled with Tailwind or Bootstrap.
+                            </p>
+                        </div>
+                        <div class="content-block">
+                            <h4>
+                                <img src="/icons/check-circle.svg" alt="check-circle-icon">
+                                The Solution</h4>
+                            <p>
+                                A .NET REST API with a 4-layer architecture and an Angular frontend. JWT login with 
+                                refresh tokens and user/admin roles, tasks with statuses and categories, server-side 
+                                filtering and pagination, and debounced search. SQL Server runs in Docker, and migrations 
+                                apply automatically.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="interested-block">
+                        <div class="interested-content">
+                            <h4>Interested in my work?</h4>
+                            <p>I'm open to junior .NET / Full-Stack positions. Drop me a message and I'll reply within a day.</p>
+                        </div>
+                        <div class="interested-buttons">
+
+                            <a href="https://mail.google.com/mail/?view=cm&to=revyakin.dev@gmail.com&su=Job%20opportunity"
+                               target="_blank" rel="noopener noreferrer" aria-label="Email">
+                                <img class="gmail-icon" src="/icons/gmail.svg" title="Gmail" alt="">
+                            </a>
+
+                            <a href="https://t.me/rntroo" target="_blank" rel="noopener noreferrer" aria-label="Telegram">
+                                <img src="/icons/telegram.svg" title="Telegram" alt="">
+                            </a>
+
+                            <a href="https://www.linkedin.com/in/kyrylo-revyakin-25a34443a/"
+                               target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                                <img src="/icons/linkedin.svg" title="LinkedIn" alt="">
+                            </a>
+
+                            <a href="https://djinni.co/q/fcbfc75191/"
+                               target="_blank" rel="noopener noreferrer" aria-label="Djinni">
+                            <span class="icon-circle">
+                                <img class="djinni-icon" src="/icons/djinni.svg" title="Djinni" alt="">
+                            </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
             </section>
         </main>
+        
+        <script type="module" src="/src/scripts/slider.js"></script>
     </body>
 </html>

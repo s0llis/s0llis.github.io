@@ -1,0 +1,335 @@
+.app-background {
+    position: fixed;
+    inset: 0;               
+    width: 100%;
+    height: 100%;
+    object-fit: cover;       
+    object-position: center;
+    z-index: -1;           
+    pointer-events: none;
+}
+
+.app-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: min(1400px, calc(100% - 32px));
+    margin: 60px auto;
+    padding: 20px 20px 30px 20px;
+    box-sizing: border-box;
+
+    background: rgb(0 0 0 / 0.01);
+    -webkit-backdrop-filter: blur(14px) saturate(120%);
+    backdrop-filter: blur(14px) saturate(120%);
+
+    border: 1px solid rgb(255 255 255 / 0.26);
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgb(255 255 255 / 0.22);
+}
+
+.app-header {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px clamp(0px, 5vw, 70px);
+    margin-bottom: 15px;
+}
+
+.app-hero-logo {
+    display: flex;
+    flex-direction: row;
+}
+
+.logo {
+    width: 25px;
+    margin-right: 5px;
+    text-shadow: 0 4px 12px rgb(0 0 0 / 0.2);
+}
+
+.nickname {
+    font-size: 26px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 0 4px 12px rgb(0 0 0 / 0.2);
+}
+
+.app-header-buttons {
+    display: flex;
+}
+
+.action-button {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    text-decoration: none;
+    color: #000000;
+    cursor: pointer;
+    white-space: nowrap;
+    border-radius: 999px;
+    font-size: 14px;
+    padding: 7px 20px 7px 20px;
+    font-weight: bold;
+    background-color: #ffffff;
+    border: 2px solid rgb(255 255 255 / 0.16);
+    box-shadow: 0 0 15px rgb(255 255 255 / 0.14);
+    margin-left: 10px;
+}
+
+.app-screenshots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider-buttons {
+    margin: clamp(0px, 2vw, 30px);
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: auto;        
+    display: flex;
+    justify-content: space-between;
+    pointer-events: none;  
+    z-index: 1;
+}
+
+.slide-button {
+    margin: 0;
+    color: black;
+    cursor: pointer;
+    white-space: nowrap;
+    width: clamp(28px, 5vw, 30px);
+    border-radius: 999px;
+    font-size: 14px;
+    padding: 5px 10px;
+    font-weight: bold;
+    background-color: #ffffff;
+    border: 2px solid rgb(255 255 255 / 0.16);
+    box-shadow: 0 0 15px rgb(255 255 255 / 0.14);
+    pointer-events: auto;
+}
+
+.slider-wrapper {
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;; 
+    box-sizing: border-box;
+}
+
+.slider {
+    display: flex;
+    aspect-ratio: 16 / 9;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    border-radius: 25px;
+    border: 2px solid rgb(255 255 255 / 0.16);
+    box-shadow: 0 0 15px rgb(255 255 255 / 0.14);
+    scrollbar-width: none;
+    overscroll-behavior-x: contain;
+}
+
+.slider img {
+    flex: 0 0 100%;      
+    width: 100%;
+    height: 100%;         
+    object-fit: contain;  
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+}
+
+.app-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    gap: 30px;
+}
+
+.content-row {
+    display: flex;
+    flex-direction: row;
+    border-radius: 15px;
+    border: 1px solid rgb(255 255 255 / 0.26);
+    overflow: hidden;
+    max-width: 1230px;
+    width: 100%;
+}
+
+.content-block {
+    flex: 1;
+    border-left: 1px solid rgb(255 255 255 / 0.26);
+    padding: 15px 25px;
+}
+
+.content-block:first-child {
+    border: none;
+}
+
+.content-row--stats .content-block {
+    flex: 0 0 auto;
+}
+.content-row--stats .content-block:last-child {
+    flex: 1;
+}
+
+.content-block img {
+    filter: brightness(0) invert(1);
+    width: 21px;
+    height: 21px;
+}
+
+.content-block h4 {
+    display: flex;
+    font-size: 17px;
+    font-weight: 800;
+    gap: 5px;
+    align-items: center;
+    margin: 0 0 5px 0;
+}
+
+.interested-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    width: 100%;
+    padding: 15px 20px;
+
+    background: linear-gradient(90deg, white, rgb(246 246 246 / 0.82));
+    color: black;
+    border-radius: 15px;
+}
+
+.interested-content {
+    width: 30%;
+}
+
+.interested-content h4 {
+    margin: 0 0 5px 0; 
+    font-weight: 900;
+    font-size: 20px;
+}
+
+.interested-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    gap: 10px;
+}
+
+.interested-buttons img {
+    width: 50px;
+    object-fit: contain;
+    filter: invert(0) drop-shadow(0 0 5px rgb(0 0 0 / 0.35));
+    transition: 300ms all;
+}
+
+.interested-buttons a {
+    display: flex;
+}
+
+.interested-buttons .gmail-icon {
+    width: 54px;
+}
+
+.icon-circle {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #000;
+    overflow: hidden;
+    transition: transform 0.15s, background 0.5s;
+}
+
+.interested-buttons .icon-circle img {
+    width: 100%;
+    height: 100%;
+    transform: scale(1.2) translateY(1px); 
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .action-button:hover {
+        background-color: #abc5ff;
+        transform: scale(1.02);
+        box-shadow: 0 0 10px #abc5ff;
+        border: 2px solid #abc5ff;
+        transition: all 300ms;
+    }
+
+    .icon-circle:hover {
+        background: #fff;
+    }
+
+    .icon-circle:hover img {
+        filter: invert(1);
+    }
+
+    .interested-buttons img:hover {
+        filter: invert(1);
+    }
+}
+
+@media (hover: none) and (pointer: coarse) {
+    .slider-buttons {
+        display: none;
+    }
+
+    .slider-wrapper {
+        padding: 0;
+    }
+}
+
+.action-button:active {
+    transform: scale(0.96);
+    box-shadow: none;
+    transition: all 80ms;
+}
+
+.interested-buttons a:active {
+    transform: scale(0.8);
+    transition: 80ms all;
+}
+
+@media (max-width: 1400px) {
+    .content-row {
+        flex-direction: column;
+    }
+    
+    .content-block {
+        border-top: 1px solid rgb(255 255 255 / 0.26);
+    }
+
+    .interested-content {
+        width: 40%;
+    }
+}
+
+@media (max-width: 610px) {
+    .app-header {
+        padding: 10px clamp(0px, 2vw, 70px);
+    }
+    
+    .interested-content {
+        width: 70%;
+    }
+
+    .interested-block {
+        flex-direction: column;
+        align-items: start
+    }
+    
+    .slide-button {
+        font-size: 12px;
+    }
+}
+
+
+
