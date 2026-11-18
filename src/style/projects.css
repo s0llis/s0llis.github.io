@@ -75,7 +75,7 @@
 }
 
 .view-project-button {
-    display: inline-block;
+    display: flex;
     text-decoration: none;
     color: white;
     cursor: pointer;
@@ -87,6 +87,8 @@
     background-color: black;
     border: 2px solid rgb(255 255 255 / 0.16);
     box-shadow: 0 0 15px rgb(255 255 255 / 0.14);
+    opacity: 0;
+    transition: 300ms all;
 }
 
 .view-project-button:hover:active {
@@ -125,7 +127,12 @@
     white-space: wrap;
 }
 
-@media (hover: hover) and (pointer: fine) {
+@media (hover: hover) and (pointer: fine)  {
+    .project-card:hover .view-project-button {
+        opacity: 1;
+        transition: 100ms opacity;
+    }
+
     .projects:hover .projects-header::after {
         transform: scaleX(1);
     }
@@ -135,7 +142,6 @@
         transform: scale(1.01);
         box-shadow: 0 0 10px #2f6bff;
         border: 2px solid #2f6bff;
-        transition: all 300ms;
     }
 }
 
