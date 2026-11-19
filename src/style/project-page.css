@@ -262,10 +262,10 @@
 
 @media (hover: hover) and (pointer: fine) {
     .action-button:hover {
-        background-color: #abc5ff;
+        background-color: var(--color-ocean-300);
         transform: scale(1.02);
-        box-shadow: 0 0 10px #abc5ff;
-        border: 2px solid #abc5ff;
+        border: 2px solid var(--color-ocean-300);
+        box-shadow: 0 0 12px var(--button-hover-shadow);
         transition: all 300ms;
     }
 
