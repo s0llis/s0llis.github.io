@@ -9,7 +9,10 @@ export default defineConfig({
         rollupOptions: {
             input: {
                 main: resolve(__dirname, 'index.html'),
-                todo: resolve(__dirname, 'projects/todo-app.html')
+                todo: resolve(__dirname, 'src/projects/todo-app.html'),
+                urlShortener: resolve(__dirname, 'src/projects/url-shortener.html'),
+                primeItems: resolve(__dirname, 'src/projects/prime-items.html'),
+                messenger: resolve(__dirname, 'src/projects/messenger-prototype.html')
             }
         }
     }

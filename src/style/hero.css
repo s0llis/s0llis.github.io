@@ -36,6 +36,7 @@
     pointer-events: none;
     z-index: 1;
 }
+
 .main-background {
     display: flex;
     flex-direction: row;
@@ -182,18 +183,23 @@
 }
 
 .hero-view-projects-button {
-    background-color: #2f6bff;
-    box-shadow: 0 0 15px #2f6bff;
-    border: 2px solid rgb(113 154 255 / 0.02);
+    background-color: var(--button-hover-bg);
+    box-shadow: 0 0 15px var(--color-ocean-400);
+    border: 2px solid var(--color-ocean-500);
     animation: shadow-flickering ease-in-out 2s infinite alternate;
+}
+
+@keyframes shadow-flickering{
+    to {box-shadow: 0 0 35px var(--color-ocean-400)
+    }
 }
 
 @media (hover: hover) and (pointer: fine) {
     .hero-contact-me-button:hover {
-        background-color: #2f6bff;
-        transform: scale(1.03);
-        box-shadow: 0 0 10px #2f6bff;
-        border: 2px solid #2f6bff;
+        background-color: var(--button-hover-bg);
+        transform: scale(1.01);
+        border: 1px solid var(--button-hover-border);
+        box-shadow: 0 0 12px var(--button-hover-shadow);
     }
 
     .hero-view-projects-button:hover {
@@ -203,7 +209,8 @@
 
 .hero-contact-me-button:active,
 .hero-view-projects-button:active {
-    background: #0d1f4a;
+    background: var(--button-active-bg);
+    border: 2px solid var(--button-hover-border);
     box-shadow: none;
     transform: scale(0.98);
     transition: all 50ms;
@@ -211,11 +218,6 @@
 
 .hero-contact-me-button:active {
     border: 2px solid rgb(0 0 0 / 0);
-}
-
-@keyframes shadow-flickering{
-    to {box-shadow: 0 0 35px rgb(47 107 255 / 0.77)
-    }
 }
 
 @media (max-width: 768px) {
