@@ -18,8 +18,8 @@
     font-size: 36px;
     font-weight: 700;
     color: rgb(255 255 255 / 0.51);
+    margin: 40px 0;
 }
-
 
 .contact-header::after {
     content: "";
