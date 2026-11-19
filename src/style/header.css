@@ -112,25 +112,27 @@ header {
     border: 1px solid rgb(255 255 255 / 0.2);
     box-shadow: 0 4px 12px rgb(0 0 0 / 0.2);
     margin-left: 150px;
-    transition: background-color 500ms, transform 500ms, box-shadow 500ms;
+    transition: all 500ms;
     cursor: pointer;
     white-space: nowrap;
 }
 
 @media (hover: hover) and (pointer: fine) {
     .get-in-touch-button:hover {
-        background-color: #2f6bff;
+        background-color: var(--button-hover-bg);
         transform: scaleX(1.03);
-        box-shadow: 0 0 15px #2f6bff;
+        border: 1px solid var(--button-hover-border);
+        box-shadow: 0 0 15px var(--button-hover-shadow);
         font-size: 15px;
     }
 }
 
 .get-in-touch-button:active {
-    background: #0d1f4a;
+    background: var(--button-active-bg);
+    border: 1px solid var(--button-hover-border);
     box-shadow: none;
     transform: scale(0.98);
-    transition: all 80ms;
+    transition: all 50ms;
 }
 
 @media (max-width: 768px) {
