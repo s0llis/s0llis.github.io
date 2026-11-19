@@ -18,6 +18,7 @@ p {
 
 html {
     scroll-behavior: smooth;
+    height: 100%;
 }
 
 @media (prefers-reduced-motion: reduce) {
