@@ -3,7 +3,7 @@
     flex-direction: column;
     align-items: stretch;
     max-width: 1700px;     
-    margin: 100px auto;
+    margin: 200px auto;
     padding: 0 25px;          
     box-sizing: border-box;
 }
@@ -194,16 +194,15 @@
     .projects {
         padding: 16px 16px;
     }
-    
-    .projects-list-card {
-        width: 100%;
-    }
 
     .projects-stage {
-        flex-direction: column;
-        align-items: stretch;
-        gap: 0;
-        padding: 20px;
+        height: auto;
+    }
+
+    .projects-list-card {
+        flex: 1 1 auto;
+        height: auto;
+        width: 100%;
     }
     
     .projects-text {
