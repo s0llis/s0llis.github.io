@@ -4,11 +4,14 @@
         <title>S0llis's Portfolio</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="color-scheme" content="only light">
+
+        <link rel="stylesheet" href="./src/style/variables.css">
         <link rel="stylesheet" href="./src/style/main.css">
         <link rel="stylesheet" href="./src/style/header.css">
         <link rel="stylesheet" href="./src/style/hero.css">
         <link rel="stylesheet" href="./src/style/about.css">
         <link rel="stylesheet" href="./src/style/projects.css">
+        <link rel="stylesheet" href="./src/style/contact.css">
         
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -167,89 +170,93 @@
 
             <section class="projects" id="projects">
                 <h3 class="projects-header">02. Projects</h3>
-                <div class="projects-list-card">
-                    <div class="project-card">
-                        <div class="project-image"><img src="/images/todo-app.webp" alt="project-image-1"></div>
-                        <div class="project-content">
-                            <div class="project-title">
-                                <h3>Todo App</h3>
-                                <a class="view-project-button" href="/projects/todo-app.html">View Project &#10132;</a>
-                            </div>
-                            <div class="project-stack-tags">
-                                <span>.NET 10</span>
-                                <span>ASP.NET Core</span>
-                                <span>Angular</span>
-                                <span>EF Core</span>
-                                <span>SQL Server</span>
-                                <span>Docker</span>
-                                <span>JWT</span>
-                            </div>
-                            <p>A full-stack to-do app: create tasks, sort them into categories and track their status.
-                                Includes login, search and separate user and admin roles.</p>
-                        </div>
-                    </div>
 
-                    <div class="project-card" id="project-card-2">
-                        <div class="project-image"><img src="/images/url-shortener-api.webp" alt="project-image-2"></div>
-                        <div class="project-content">
-                            <div class="project-title">
-                                <h3>Url Shortener</h3>
-                                <a class="view-project-button" href="/projects/url-shortener.html">View Project &#10132;</a>
+                <div class="projects-stage">
+                    <img class="projects-background" src="/images/projects-backgound.webp" alt="water projects background">
+                    <div class="projects-list-card">
+                        <div class="project-card">
+                            <div class="project-image"><img src="/images/todo-app-card.webp" alt="project-image-1"></div>
+                            <div class="project-content">
+                                <div class="project-title">
+                                    <h3>Todo App</h3>
+                                    <a class="view-project-button" href="/src/projects/todo-app.html">View Project &#10132;</a>
+                                </div>
+                                <div class="project-stack-tags">
+                                    <span>.NET 10</span>
+                                    <span>ASP.NET Core</span>
+                                    <span>Angular</span>
+                                    <span>EF Core</span>
+                                    <span>SQL Server</span>
+                                    <span>Docker</span>
+                                    <span>JWT</span>
+                                </div>
+                                <p>A full-stack to-do app: create tasks, sort them into categories and track their status.
+                                    Includes login, search and separate user and admin roles.</p>
                             </div>
-                            <div class="project-stack-tags">
-                                <span>.NET 10</span>
-                                <span>ASP.NET Core</span>
-                                <span>Angular</span>
-                                <span>EF Core</span>
-                                <span>SQL Server</span>
-                                <span>Docker</span>
-                                <span>JWT</span>
-                            </div>
-                            <p>A full-stack URL shortener: create short links, redirect to the original page and manage
-                                them without page reloads. Login with user and admin roles.</p>
                         </div>
-                    </div>
-                    
-                    <div class="project-card" id="project-card-3">
-                        <div class="project-image"><img src="/images/prime-items-api.webp" alt="project-image-3"></div>
-                        <div class="project-content">
-                            <div class="project-title">
-                                <h3>Prime Items</h3>
-                                <a class="view-project-button" href="/projects/prime-items.html">View Project &#10132;</a>
+
+                        <div class="project-card" id="project-card-2">
+                            <div class="project-image"><img src="/images/url-shortener-card.webp" alt="project-image-2"></div>
+                            <div class="project-content">
+                                <div class="project-title">
+                                    <h3>Url Shortener</h3>
+                                    <a class="view-project-button" href="/src/projects/url-shortener.html">View Project &#10132;</a>
+                                </div>
+                                <div class="project-stack-tags">
+                                    <span>.NET 10</span>
+                                    <span>ASP.NET Core</span>
+                                    <span>Angular</span>
+                                    <span>EF Core</span>
+                                    <span>SQL Server</span>
+                                    <span>Docker</span>
+                                    <span>JWT</span>
+                                </div>
+                                <p>A full-stack URL shortener: create short links, redirect to the original page and manage
+                                    them without page reloads. Login with user and admin roles.</p>
                             </div>
-                            <div class="project-stack-tags">
-                                <span>.NET 10</span>
-                                <span>ASP.NET Core</span>
-                                <span>EF Core</span>
-                                <span>SQL Server</span>
-                                <span>Docker</span>
-                                <span>JWT</span>
-                                <span>xUnit</span>
-                                <span>Moq</span>
-                            </div>
-                            
-                            <p>An online store management system: browse products, place orders and track their status. 
-                                Includes login, sales analytics and separate customer, manager and admin roles</p>
                         </div>
-                    </div>
-                    
-                    <div class="project-card" id="project-card-4">
-                        <div class="project-image"><img src="/images/messenger-api-prototype.webp" alt="project-image-4"></div>
-                        <div class="project-content">
-                            <div class="project-title">
-                                <h3>Messenger Prototype</h3>
-                                <a class="view-project-button" href="/projects/messenger-prototype.html">View Project &#10132;</a>
+
+                        <div class="project-card" id="project-card-3">
+                            <div class="project-image"><img src="/images/prime-items-card.webp" alt="project-image-3"></div>
+                            <div class="project-content">
+                                <div class="project-title">
+                                    <h3>Prime Items</h3>
+                                    <a class="view-project-button" href="/src/projects/prime-items.html">View Project &#10132;</a>
+                                </div>
+                                <div class="project-stack-tags">
+                                    <span>.NET 10</span>
+                                    <span>ASP.NET Core</span>
+                                    <span>EF Core</span>
+                                    <span>SQL Server</span>
+                                    <span>Docker</span>
+                                    <span>JWT</span>
+                                    <span>xUnit</span>
+                                    <span>Moq</span>
+                                </div>
+
+                                <p>An online store management system: browse products, place orders and track their status.
+                                    Includes login, sales analytics and separate customer, manager and admin roles</p>
                             </div>
-                            <div class="project-stack-tags">
-                                <span>Node.js</span>
-                                <span>Express.js</span>
-                                <span>TypeScript</span>
-                                <span>PostgreSQL</span>
-                                <span>RabbitMQ</span>
-                                <span>Docker</span>
+                        </div>
+
+                        <div class="project-card" id="project-card-4">
+                            <div class="project-image"><img src="/images/messenger-prototype-card.webp" alt="project-image-4"></div>
+                            <div class="project-content">
+                                <div class="project-title">
+                                    <h3>Messenger Prototype</h3>
+                                    <a class="view-project-button" href="/src/projects/messenger-prototype.html">View Project &#10132;</a>
+                                </div>
+                                <div class="project-stack-tags">
+                                    <span>Node.js</span>
+                                    <span>Express.js</span>
+                                    <span>TypeScript</span>
+                                    <span>PostgreSQL</span>
+                                    <span>RabbitMQ</span>
+                                    <span>Docker</span>
+                                </div>
+                                <p>A real-time messaging platform: create private or group chats, send messages and browse
+                                    chat history. Includes user reporting and separate user and moderator roles.</p>
                             </div>
-                            <p>A real-time messaging platform: create private or group chats, send messages and browse 
-                                chat history. Includes user reporting and separate user and moderator roles.</p>
                         </div>
                     </div>
                 </div>

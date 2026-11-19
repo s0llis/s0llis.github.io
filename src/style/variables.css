@@ -1,0 +1,17 @@
+:root {
+    --color-abyss-950: #1a181b;
+    --color-ocean-900: #152a32;
+    --color-ocean-800: #20353f;
+    --color-ocean-700: #2c404b;
+    --color-ocean-600: #376778;
+    --color-ocean-500: #4b8090;
+    --color-ocean-400: #6d9ca8;
+    --color-ocean-300: #82aab3;
+    
+    --button-hover-bg: #4b8090;
+    --button-hover-border: #376778;
+    --button-hover-shadow: rgb(55 103 120 / 0.65);
+
+    --button-active-bg: #152a32;
+    --button-active-border: #376778;
+}

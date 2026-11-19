@@ -30,17 +30,39 @@
     transition: transform 0.6s ease;
 }
 
+.projects-stage {
+    position: relative;
+    overflow: hidden;      
+    isolation: isolate;      
+    padding: 40px;        
+    border-radius: 35px;   
+}
+
+.projects-background {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;    
+    z-index: -1;
+    pointer-events: none;
+}
+
 .projects-list-card {
     display: flex;
     z-index: 1;
     flex-direction: column;
     padding: 5px 10px;
-    border-radius: 35px;
-    border: 1px solid rgb(255 255 255 / 0.24);
-    box-shadow: 0 0 70px rgb(255 255 255 / 0.32);
     overflow: hidden;
-    width: 905px;
-    box-sizing: border-box;
+    width: 920px;
+
+    background: rgb(0 0 0 / 0.47);
+    -webkit-backdrop-filter: blur(14px) saturate(120%);
+    backdrop-filter: blur(14px) saturate(120%);
+
+    border: 1px solid rgb(255 255 255 / 0.23);
+    border-radius: 30px;
+    box-shadow: 0 0 10px rgb(0 0 0 / 0.4);
 }
 
 .project-card {
@@ -88,15 +110,7 @@
     border: 2px solid rgb(255 255 255 / 0.16);
     box-shadow: 0 0 15px rgb(255 255 255 / 0.14);
     opacity: 0;
-    transition: 300ms all;
-}
-
-.view-project-button:hover:active {
-    background: #0d1f4a;
-    border: 2px solid #0d1f4a;
-    box-shadow: none;
-    transform: scale(0.98);
-    transition: all 50ms;
+    transition: all 700ms;
 }
 
 .project-image {
@@ -115,9 +129,9 @@
 .project-stack-tags span {
     border-radius: 99px;
     font-size: 13px;
-    background-color: rgb(31 68 152 / 0.52);
-    border: 1px solid rgb(47 107 255 / 0.2);
-    box-shadow: 0 0 28px rgb(47 107 255 / 0.52);
+    background-color: #20353f;
+    border: 1px solid #376778;
+    box-shadow: 0 0 28px #376778;
     padding: 4px 10px;
 }
 
@@ -130,7 +144,6 @@
 @media (hover: hover) and (pointer: fine)  {
     .project-card:hover .view-project-button {
         opacity: 1;
-        transition: 100ms opacity;
     }
 
     .projects:hover .projects-header::after {
@@ -138,11 +151,19 @@
     }
 
     .view-project-button:hover {
-        background-color: #2f6bff;
+        background-color: var(--button-hover-bg); 
         transform: scale(1.01);
-        box-shadow: 0 0 10px #2f6bff;
-        border: 2px solid #2f6bff;
+        border: 1px solid var(--button-hover-border);  
+        box-shadow: 0 0 12px var(--button-hover-shadow);
     }
+}
+
+.view-project-button:active {
+    background: var(--button-active-bg);
+    border: 2px solid var(--button-active-border);
+    box-shadow: none;
+    transform: scale(0.98);
+    transition: 50ms all;
 }
 
 @media (max-width: 1400px) {
