@@ -20,7 +20,7 @@ html {
     scroll-behavior: smooth;
     height: 100%;
     color-scheme: dark;
-    scrollbar-color: var(--color-ocean-300) var(--color-abyss-950); 
+    scrollbar-color: var(--color-ocean-500) var(--color-abyss-950); 
     scrollbar-width: thin;
 }
 
